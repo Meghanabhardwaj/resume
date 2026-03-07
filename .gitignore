@@ -258,6 +258,9 @@ TSWLatexianTemp*
 
 ## Editors:
 # WinEdt
+__pycache__/
+.venv/
+.env
 *.bak
 *.sav
 

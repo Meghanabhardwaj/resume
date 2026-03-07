@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Editor</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <div class="topbar-copy">
+          <p class="eyebrow">Resume Editor</p>
+          <h1>Content</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="status-pill">
+            <span id="versionValue">-</span>
+          </div>
+          <button id="generateButton" class="button primary" type="button">Generate</button>
+        </div>
+      </header>
+
+      <section class="workspace" id="workspace">
+        <section class="editor-column" id="editorColumn">
+          <section class="identity-card panel">
+            <div class="identity-copy">
+              <p id="summaryName" class="identity-name">Loading...</p>
+              <p id="summaryEmail" class="identity-line">-</p>
+              <p id="summaryPhone" class="identity-line">-</p>
+              <p id="summaryLocation" class="identity-line">-</p>
+            </div>
+            <div class="identity-badge">
+              <span id="summaryInitials">AJ</span>
+            </div>
+          </section>
+
+          <section class="actions-row">
+            <button id="saveButton" class="button secondary" type="button">Save YAML</button>
+            <button id="pushButton" class="button accent" type="button">Push</button>
+          </section>
+
+          <section class="meta-strip panel">
+            <div>
+              <p class="meta-label">Branch</p>
+              <p id="branchValue" class="meta-value">-</p>
+            </div>
+            <div>
+              <p class="meta-label">Push Mode</p>
+              <p id="pushModeValue" class="meta-value">-</p>
+            </div>
+          </section>
+
+          <p id="formMessage" class="message"></p>
+          <div id="errorSummary" class="error-summary hidden"></div>
+          <form id="resumeForm" class="section-stack"></form>
+        </section>
+
+        <div class="splitter" id="splitter" aria-hidden="true"></div>
+
+        <aside class="preview-column" id="previewColumn">
+          <section class="panel preview-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Live Preview</p>
+                <h2>Generated resume</h2>
+              </div>
+            </div>
+            <iframe id="previewFrame" class="preview-frame" title="Resume PDF preview"></iframe>
+          </section>
+
+          <section class="panel push-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Release</p>
+                <h2>Commit and push</h2>
+              </div>
+            </div>
+            <label class="field">
+              <span>Commit message</span>
+              <input id="commitMessage" type="text" placeholder="resume: release vX.Y.Z" />
+            </label>
+            <p class="hint">Leave this empty to use the auto-bumped version in the default commit message.</p>
+            <p id="pushMessage" class="message"></p>
+          </section>
+
+          <section class="panel logs-panel-card">
+            <div class="panel-heading">
+              <div>
+                <p class="panel-kicker">Logs</p>
+                <h2>Command output</h2>
+              </div>
+            </div>
+            <pre id="logsPanel" class="logs-panel">Waiting for build output.</pre>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

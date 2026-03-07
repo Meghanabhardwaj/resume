@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Resume Editor Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["meta", "basics", "pdf", "skills", "experience", "projects", "education", "achievements", "schema"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "title": "Meta",
+      "additionalProperties": false,
+      "required": ["canonical", "version", "created_year", "license_url"],
+      "properties": {
+        "canonical": { "type": "string", "format": "uri", "title": "Canonical URL" },
+        "version": { "type": "string", "pattern": "^v\\d+\\.\\d+\\.\\d+$", "title": "Version" },
+        "created_year": { "type": "integer", "title": "Created Year" },
+        "license_url": { "type": "string", "format": "uri", "title": "License URL" }
+      }
+    },
+    "basics": {
+      "type": "object",
+      "title": "Basics",
+      "additionalProperties": false,
+      "required": ["name", "label", "email", "phone", "website", "summary", "location", "profiles"],
+      "properties": {
+        "name": { "type": "string", "title": "Name" },
+        "label": { "type": "string", "title": "Role Label" },
+        "email": { "type": "string", "format": "email", "title": "Email" },
+        "phone": {
+          "type": "object",
+          "title": "Phone",
+          "additionalProperties": false,
+          "required": ["display", "url"],
+          "properties": {
+            "display": { "type": "string", "title": "Display" },
+            "url": { "type": "string", "title": "Phone URL" }
+          }
+        },
+        "website": { "type": "string", "format": "uri", "title": "Website" },
+        "summary": { "type": "string", "title": "Summary", "x-widget": "textarea" },
+        "location": {
+          "type": "object",
+          "title": "Location",
+          "additionalProperties": false,
+          "required": ["city", "region", "country_code", "country_name", "display", "pdf_display"],
+          "properties": {
+            "city": { "type": "string", "title": "City" },
+            "region": { "type": "string", "title": "Region" },
+            "country_code": { "type": "string", "title": "Country Code" },
+            "country_name": { "type": "string", "title": "Country Name" },
+            "display": { "type": "string", "title": "Display" },
+            "pdf_display": { "type": "string", "title": "PDF Display" }
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "title": "Profiles",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "network", "username", "url"],
+            "properties": {
+              "label": { "type": "string", "title": "Label" },
+              "network": { "type": "string", "title": "Network" },
+              "username": { "type": "string", "title": "Username" },
+              "url": { "type": "string", "format": "uri", "title": "URL" }
+            }
+          }
+        }
+      }
+    },
+    "pdf": {
+      "type": "object",
+      "title": "PDF Metadata",
+      "additionalProperties": false,
+      "required": ["subject", "creator", "producer", "lang", "pubtype", "keywords"],
+      "properties": {
+        "subject": { "type": "string", "title": "Subject", "x-widget": "textarea" },
+        "creator": { "type": "string", "title": "Creator" },
+        "producer": { "type": "string", "title": "Producer" },
+        "lang": { "type": "string", "title": "Language" },
+        "pubtype": { "type": "string", "title": "Publication Type" },
+        "keywords": {
+          "type": "array",
+          "title": "Keywords",
+          "items": { "type": "string", "title": "Keyword" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "title": "Skills",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "keywords"],
+        "properties": {
+          "name": { "type": "string", "title": "Category" },
+          "keywords": {
+            "type": "array",
+            "title": "Keywords",
+            "items": { "type": "string", "title": "Keyword" }
+          }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "title": "Experience",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["company", "position", "url", "start_date", "end_date", "start_display", "end_display", "location", "alternate_names", "bullets"],
+        "properties": {
+          "company": { "type": "string", "title": "Company" },
+          "position": { "type": "string", "title": "Position" },
+          "url": { "type": ["string", "null"], "format": "uri", "title": "Company URL" },
+          "start_date": { "type": "string", "title": "Start Date" },
+          "end_date": { "type": ["string", "null"], "title": "End Date" },
+          "start_display": { "type": "string", "title": "Start Display" },
+          "end_display": { "type": "string", "title": "End Display" },
+          "location": {
+            "type": "object",
+            "title": "Location",
+            "additionalProperties": false,
+            "required": ["city", "region", "country", "display"],
+            "properties": {
+              "city": { "type": "string", "title": "City" },
+              "region": { "type": "string", "title": "Region" },
+              "country": { "type": "string", "title": "Country" },
+              "display": { "type": "string", "title": "Display" }
+            }
+          },
+          "alternate_names": {
+            "type": "array",
+            "title": "Alternate Names",
+            "items": { "type": "string", "title": "Alternate Name" }
+          },
+          "bullets": {
+            "type": "array",
+            "title": "Bullets",
+            "items": { "type": "string", "title": "Bullet", "x-widget": "textarea" }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "title": "Projects",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "url", "link_label", "roles", "keywords", "bullets"],
+        "properties": {
+          "name": { "type": "string", "title": "Name" },
+          "url": { "type": "string", "format": "uri", "title": "Project URL" },
+          "link_label": { "type": "string", "title": "Link Label" },
+          "roles": {
+            "type": "array",
+            "title": "Roles",
+            "items": { "type": "string", "title": "Role" }
+          },
+          "keywords": {
+            "type": "array",
+            "title": "Keywords",
+            "items": { "type": "string", "title": "Keyword" }
+          },
+          "bullets": {
+            "type": "array",
+            "title": "Bullets",
+            "items": { "type": "string", "title": "Bullet", "x-widget": "textarea" }
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "title": "Education",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["institution", "url", "area", "study_type", "short_study_type", "score", "start_date", "end_date", "display"],
+        "properties": {
+          "institution": { "type": "string", "title": "Institution" },
+          "url": { "type": ["string", "null"], "format": "uri", "title": "Institution URL" },
+          "area": { "type": "string", "title": "Area" },
+          "study_type": { "type": "string", "title": "Study Type" },
+          "short_study_type": { "type": "string", "title": "Short Study Type" },
+          "score": { "type": "string", "title": "Score" },
+          "start_date": { "type": "string", "title": "Start Date" },
+          "end_date": { "type": "string", "title": "End Date" },
+          "display": { "type": "string", "title": "Display" }
+        }
+      }
+    },
+    "achievements": {
+      "type": "array",
+      "title": "Achievements",
+      "items": { "type": "string", "title": "Achievement", "x-widget": "textarea" }
+    },
+    "schema": {
+      "type": "object",
+      "title": "Structured Data",
+      "additionalProperties": false,
+      "required": ["person_id", "resume_id", "additional_knows_about"],
+      "properties": {
+        "person_id": { "type": "string", "format": "uri", "title": "Person ID" },
+        "resume_id": { "type": "string", "format": "uri", "title": "Resume ID" },
+        "additional_knows_about": {
+          "type": "array",
+          "title": "Additional Knows About",
+          "items": { "type": "string", "title": "Topic" }
+        }
+      }
+    }
+  }
+}

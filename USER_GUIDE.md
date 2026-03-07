@@ -34,9 +34,10 @@ Do not manually edit these generated files:
 Install these tools first:
 
 - [Docker](https://docs.docker.com/)
-- [Git](https://git-scm.com/)
 - [yq](https://github.com/mikefarah/yq)
 - `python3`
+- [uv](https://docs.astral.sh/uv/)
+- optionally: [Git](https://git-scm.com/) for local git-based push
 - optionally: `exiftool`
 - optionally: `pdfdetach`
 
@@ -44,6 +45,7 @@ Check that the required tools are available:
 
 ```sh
 python3 --version
+uv --version
 yq --version
 docker --version
 make --version
@@ -133,6 +135,62 @@ Show all available make targets:
 ```sh
 make help
 ```
+
+## Web UI Workflow
+
+If you prefer not to edit YAML directly, use the included local web editor:
+
+### Docker Compose option
+
+```sh
+cp .env.example .env
+docker compose up --build
+```
+
+Open `http://127.0.0.1:5000`.
+
+This starts the editor in a container, mounts the repository into it, mounts the host Docker socket so PDF compilation can still run, and auto-builds the `latex-builder` image if needed.
+
+### uv option
+
+Use this when you want to run the editor directly on your machine instead of in a container.
+
+```sh
+uv sync
+uv run python app.py
+```
+
+Open `http://127.0.0.1:5000` and use the UI flow:
+
+1. update the schema-driven form
+2. click `Save / Update` to validate and write [`resume.yaml`](./resume.yaml)
+3. click `Generate` to regenerate artifacts and compile the PDF
+4. review the inline preview and logs
+5. click `Push` to auto-bump the patch version, commit, and push to the current branch
+
+The push flow blocks if unrelated tracked files are dirty.
+
+If you want the editor to push using local git credentials instead of a GitHub token, also make sure these work on your machine:
+
+```sh
+git --version
+git remote -v
+```
+
+### Optional GitHub Token Mode
+
+If the app is running inside a container or on a machine without local git credentials, provide these environment variables:
+
+```sh
+export GITHUB_TOKEN=...
+export GITHUB_OWNER=adityaongit
+export GITHUB_REPO=resume
+export GITHUB_BRANCH=main
+```
+
+In this mode, the backend creates the commit and updates the branch through the GitHub API. The token must have write access to the target repository.
+
+If these variables are not set, the app will use local git mode instead.
 
 ## Output
 
