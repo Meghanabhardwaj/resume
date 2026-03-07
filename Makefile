@@ -17,3 +17,6 @@ compile:
 
 clean:
 	rm -f *.pdf *.aux *.log *.out
+
+dev:
+	make clean && make compile
