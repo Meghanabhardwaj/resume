@@ -103,18 +103,6 @@
   ],
   "projects": [
     {
-      "name": "SplitWatt - Electricity Bill Splitter",
-      "url": "https://splitwatt.vercel.app/",
-      "roles": [
-        "Creator"
-      ],
-      "keywords": [
-        "Next.js",
-        "Better Auth",
-        "Umami"
-      ]
-    },
-    {
       "name": "Soteira - Real Time Video Inference",
       "url": "https://github.com/adityaongit/soteira",
       "roles": [
@@ -138,6 +126,18 @@
         "Node.js",
         "WebSockets",
         "React.js"
+      ]
+    },
+    {
+      "name": "SplitWatt - Electricity Bill Splitter",
+      "url": "https://splitwatt.vercel.app/",
+      "roles": [
+        "Creator"
+      ],
+      "keywords": [
+        "Next.js",
+        "Better Auth",
+        "Umami"
       ]
     }
   ],

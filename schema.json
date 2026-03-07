@@ -95,16 +95,6 @@
       "workExample": [
         {
           "@type": "SoftwareSourceCode",
-          "name": "SplitWatt - Electricity Bill Splitter",
-          "url": "https://splitwatt.vercel.app/",
-          "programmingLanguage": [
-            "Next.js",
-            "Better Auth",
-            "Umami"
-          ]
-        },
-        {
-          "@type": "SoftwareSourceCode",
           "name": "Soteira - Real Time Video Inference",
           "url": "https://github.com/adityaongit/soteira",
           "programmingLanguage": [
@@ -123,6 +113,16 @@
             "Node.js",
             "WebSockets",
             "React.js"
+          ]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "SplitWatt - Electricity Bill Splitter",
+          "url": "https://splitwatt.vercel.app/",
+          "programmingLanguage": [
+            "Next.js",
+            "Better Auth",
+            "Umami"
           ]
         }
       ],
@@ -231,17 +231,17 @@
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "SplitWatt - Electricity Bill Splitter"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
               "name": "Soteira - Real Time Video Inference"
             },
             {
               "@type": "ListItem",
-              "position": 3,
+              "position": 2,
               "name": "Pair Code - Developer Platform"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "SplitWatt - Electricity Bill Splitter"
             }
           ]
         }
