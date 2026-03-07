@@ -1,23 +1,26 @@
 # Aditya Jindal Resume
 
-This repository contains my resume in LaTeX, organized into reusable section partials and a shared formatting layer for easier maintenance.
+Welcome to my resume repository. This repository contains my resume written in TeX, with reusable section partials and a shared formatting layer for easier maintenance.
 
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/)
 - [Git](https://git-scm.com/)
 
-## Repository Layout
+## Contents
 
-- [`main.tex`](./main.tex): Entry point for the resume.
-- [`formatting.sty`](./formatting.sty): Shared styling and layout helpers.
-- [`sections/`](./sections/): Section-wise content files.
-- [`schema.json`](./schema.json): Structured resume metadata in Schema.org JSON-LD format.
-- [`resume.json`](./resume.json): Resume data in JSON Resume format.
+- [`main.tex`](./main.tex): The main TeX file for the resume.
+- [`formatting.sty`](./formatting.sty): The shared style file for formatting and PDF metadata support.
+- [`sections/`](./sections/): Individual TeX files for each resume section.
+- [`schema.json`](./schema.json): Schema.org JSON-LD structured data embedded in the PDF.
+- [`resume.json`](./resume.json): JSON Resume structured data embedded in the PDF for ATS parsers.
 
-## Usage
+> [!NOTE]
+> This repository uses a custom Docker image for compiling the resume, ensuring consistency and reproducibility across environments.
 
-Clone the repository:
+## How to Use
+
+<p>1. <strong>Clone the repository</strong>:</p>
 
 ```sh
 git clone git@github.com:adityaongit/resume.git
@@ -29,13 +32,13 @@ Or via HTTPS:
 git clone https://github.com/adityaongit/resume.git
 ```
 
-Build the Docker image:
+<p>2. <strong>Build the Docker image</strong>:</p>
 
 ```sh
 docker build -t latex-builder .docker
 ```
 
-Compile the resume:
+<p>3. <strong>Compile the resume</strong>:</p>
 
 ```sh
 docker run --rm -v "$(pwd):/data" latex-builder -jobname="Aditya_SWE_Resume_2YOE" main.tex
@@ -47,24 +50,85 @@ You can also use:
 make build
 ```
 
-## Output
+> [!NOTE]
+> `jobname` controls the output filename. Change it if you want a different PDF name.
 
-The compiled PDF is generated as `Aditya_SWE_Resume_2YOE.pdf`.
+## Make Commands
+
+Use the included `Makefile` targets for common workflows:
+
+```sh
+make help
+```
+
+Shows the available targets.
+
+```sh
+make docker
+```
+
+Builds the local Docker image used for LaTeX compilation.
+
+```sh
+make compile
+```
+
+Compiles the resume PDF using the existing Docker image.
+
+```sh
+make build
+```
+
+Builds the Docker image and compiles the resume.
+
+```sh
+make clean
+```
+
+Removes generated PDF and LaTeX auxiliary files.
+
+```sh
+make dev
+```
+
+Cleans previous artifacts and recompiles the resume.
+
+## Metadata
+
+The compiled PDF contains embedded metadata across multiple standards, making it easier for ATS systems, semantic crawlers, and document parsers to consume:
+
+| Standard           | Description                                                      |
+| ------------------ | ---------------------------------------------------------------- |
+| XMP / Dublin Core  | Title, author, keywords, rights, language, and dates             |
+| IPTC Core          | Contact email, URL, and address                                  |
+| Schema.org JSON-LD | Person, occupation, education, projects, and skills metadata     |
+| JSON Resume        | Open standard resume data for ATS-compatible parsing             |
+
+Verify the PDF metadata after compiling:
+
+```sh
+exiftool -xmp:all Aditya_SWE_Resume_2YOE.pdf
+```
+
+List embedded attachments:
+
+```sh
+pdfdetach -list Aditya_SWE_Resume_2YOE.pdf
+```
 
 ## Customization
 
-- Update content in [`sections/`](./sections/).
-- Adjust styling in [`formatting.sty`](./formatting.sty).
-- Keep [`resume.json`](./resume.json) and [`schema.json`](./schema.json) aligned with the visible resume content.
+- **Content**: Update [`main.tex`](./main.tex) and the files in [`sections/`](./sections/).
+- **Formatting**: Modify [`formatting.sty`](./formatting.sty) to change appearance and layout.
+- **Structured data**: Update [`schema.json`](./schema.json) and [`resume.json`](./resume.json) to keep them aligned with the visible resume content.
 
 ## Releases
 
-GitHub Actions builds and releases the resume from `main`.
+> [!IMPORTANT]
+> GitHub Actions automatically builds and releases the resume on every push to `main`.
 
-Latest release:
-
-https://github.com/adityaongit/resume/releases/latest
+Download the latest compiled PDF from the [Releases](https://github.com/adityaongit/resume/releases/latest) page.
 
 ## License
 
-Licensed under Apache-2.0. See [`LICENSE`](./LICENSE).
+This project is licensed under the Apache-2.0 License. See [`LICENSE`](./LICENSE) for details.
