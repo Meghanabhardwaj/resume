@@ -6,12 +6,15 @@ Welcome to my resume repository. This repository contains my resume written in T
 
 - [Docker](https://docs.docker.com/)
 - [Git](https://git-scm.com/)
+- [yq](https://github.com/mikefarah/yq)
 
 ## Contents
 
 - [`main.tex`](./main.tex): The main TeX file for the resume.
 - [`formatting.sty`](./formatting.sty): The shared style file for formatting and PDF metadata support.
-- [`sections/`](./sections/): Individual TeX files for each resume section.
+- [`resume.yaml`](./resume.yaml): The single source of truth for resume content and metadata.
+- [`scripts/generate_resume.py`](./scripts/generate_resume.py): Generates LaTeX partials and embedded JSON files from [`resume.yaml`](./resume.yaml).
+- [`sections/`](./sections/): Generated TeX files for each resume section.
 - [`schema.json`](./schema.json): Schema.org JSON-LD structured data embedded in the PDF.
 - [`resume.json`](./resume.json): JSON Resume structured data embedded in the PDF for ATS parsers.
 
@@ -38,7 +41,13 @@ git clone https://github.com/adityaongit/resume.git
 docker build -t latex-builder .docker
 ```
 
-<p>3. <strong>Compile the resume</strong>:</p>
+<p>3. <strong>Generate the derived artifacts</strong>:</p>
+
+```sh
+make generate
+```
+
+<p>4. <strong>Compile the resume</strong>:</p>
 
 ```sh
 docker run --rm -v "$(pwd):/data" latex-builder -jobname="Aditya_SWE_Resume_2YOE" main.tex
@@ -47,11 +56,35 @@ docker run --rm -v "$(pwd):/data" latex-builder -jobname="Aditya_SWE_Resume_2YOE
 You can also use:
 
 ```sh
-make build
+make compile
 ```
 
 > [!NOTE]
-> `jobname` controls the output filename. Change it if you want a different PDF name.
+> `make compile` and `make build` regenerate all derived artifacts automatically before compiling.
+
+## Authoring Flow
+
+Edit [`resume.yaml`](./resume.yaml) only.
+
+Supported inline formatting inside prose fields such as bullets and achievements:
+
+- `**bold**`
+- `_italic_`
+- `[label](https://example.com)`
+
+Generated artifacts:
+
+- [`sections/header.tex`](./sections/header.tex)
+- [`sections/experience.tex`](./sections/experience.tex)
+- [`sections/skills.tex`](./sections/skills.tex)
+- [`sections/projects.tex`](./sections/projects.tex)
+- [`sections/achievements.tex`](./sections/achievements.tex)
+- [`sections/education.tex`](./sections/education.tex)
+- [`generated/metadata.tex`](./generated/metadata.tex)
+- [`resume.json`](./resume.json)
+- [`schema.json`](./schema.json)
+
+These files are regenerated automatically by `make compile` and `make build`. Do not edit them manually.
 
 ## Make Commands
 
@@ -64,6 +97,12 @@ make help
 Shows the available targets.
 
 ```sh
+make generate
+```
+
+Regenerates the TeX partials and JSON metadata from [`resume.yaml`](./resume.yaml).
+
+```sh
 make docker
 ```
 
@@ -73,7 +112,7 @@ Builds the local Docker image used for LaTeX compilation.
 make compile
 ```
 
-Compiles the resume PDF using the existing Docker image.
+Regenerates artifacts and compiles the resume PDF using the existing Docker image.
 
 ```sh
 make build
@@ -118,9 +157,10 @@ pdfdetach -list Aditya_SWE_Resume_2YOE.pdf
 
 ## Customization
 
-- **Content**: Update [`main.tex`](./main.tex) and the files in [`sections/`](./sections/).
+- **Content**: Update [`resume.yaml`](./resume.yaml) and regenerate the derived files.
 - **Formatting**: Modify [`formatting.sty`](./formatting.sty) to change appearance and layout.
-- **Structured data**: Update [`schema.json`](./schema.json) and [`resume.json`](./resume.json) to keep them aligned with the visible resume content.
+- **Document wiring**: [`main.tex`](./main.tex) controls section order and PDF attachments.
+- **Structured data**: [`resume.json`](./resume.json), [`schema.json`](./schema.json), and [`generated/metadata.tex`](./generated/metadata.tex) are derived from [`resume.yaml`](./resume.yaml).
 
 ## Releases
 
