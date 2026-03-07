@@ -9,8 +9,9 @@
       "email": "work.adityajindal@gmail.com",
       "url": "https://adysfolio.vercel.app/",
       "sameAs": [
-        "https://github.com/adityaongit",
+        "https://adysfolio.vercel.app/",
         "https://www.linkedin.com/in/adityaonin",
+        "https://github.com/adityaongit",
         "https://leetcode.com/adysleetcode"
       ],
       "address": {
@@ -24,24 +25,23 @@
         "name": "Chandigarh University"
       },
       "knowsAbout": [
+        "TypeScript",
         "Go",
         "JavaScript",
-        "TypeScript",
         "Python",
         "Java",
         "Next.js",
         "Node.js",
-        "Express.js",
         "React.js",
+        "Express.js",
         "Flask",
         "Celery",
         "Typesense",
-        "PostgreSQL",
         "MySQL",
+        "PostgreSQL",
         "Prisma",
         "Metabase",
         "AdminJS",
-        "Git",
         "Docker",
         "Kubernetes",
         "Terraform",
@@ -49,7 +49,6 @@
         "AWS",
         "SigNoz",
         "PagerDuty",
-        "LaTeX",
         "LLMs",
         "RAG"
       ],
@@ -108,13 +107,23 @@
           "@type": "SoftwareSourceCode",
           "name": "Soteira - Real Time Video Inference",
           "url": "https://github.com/adityaongit/soteira",
-          "programmingLanguage": ["Python", "OpenCV", "YOLO", "LLMs"]
+          "programmingLanguage": [
+            "LLMs",
+            "OpenCV",
+            "YOLO",
+            "Python",
+            "ML"
+          ]
         },
         {
           "@type": "SoftwareSourceCode",
           "name": "Pair Code - Developer Platform",
           "url": "https://paircode-dev.vercel.app/",
-          "programmingLanguage": ["Node.js", "WebSockets", "React.js"]
+          "programmingLanguage": [
+            "Node.js",
+            "WebSockets",
+            "React.js"
+          ]
         }
       ],
       "copyrightYear": 2026,
@@ -205,7 +214,7 @@
             {
               "@type": "ListItem",
               "position": 4,
-              "name": "Infrastructure and DevOps: Docker, Kubernetes, Terraform, GCP, AWS, SigNoz, PagerDuty"
+              "name": "Infrastructure & DevOps: Docker, Kubernetes, Terraform, GCP, AWS, SigNoz, PagerDuty"
             }
           ]
         },

@@ -13,14 +13,14 @@
     },
     "profiles": [
       {
-        "network": "GitHub",
-        "username": "adityaongit",
-        "url": "https://github.com/adityaongit"
-      },
-      {
         "network": "LinkedIn",
         "username": "adityaonin",
         "url": "https://www.linkedin.com/in/adityaonin"
+      },
+      {
+        "network": "GitHub",
+        "username": "adityaongit",
+        "url": "https://github.com/adityaongit"
       },
       {
         "network": "LeetCode",
@@ -39,10 +39,10 @@
     {
       "name": "Google",
       "position": "Software Engineering Intern",
-      "url": "https://about.google/",
       "startDate": "2023-06",
-      "endDate": "2023-08",
-      "location": "Bengaluru, Karnataka, India"
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://about.google/",
+      "endDate": "2023-08"
     }
   ],
   "education": [
@@ -58,39 +58,87 @@
   "skills": [
     {
       "name": "Languages",
-      "keywords": ["TypeScript", "Go", "JavaScript", "Python", "Java"]
+      "keywords": [
+        "TypeScript",
+        "Go",
+        "JavaScript",
+        "Python",
+        "Java"
+      ]
     },
     {
       "name": "Technologies",
-      "keywords": ["Next.js", "Node.js", "React.js", "Express.js", "Flask", "Celery", "Typesense"]
+      "keywords": [
+        "Next.js",
+        "Node.js",
+        "React.js",
+        "Express.js",
+        "Flask",
+        "Celery",
+        "Typesense"
+      ]
     },
     {
       "name": "Databases",
-      "keywords": ["MySQL", "PostgreSQL", "Prisma", "Metabase", "AdminJS"]
+      "keywords": [
+        "MySQL",
+        "PostgreSQL",
+        "Prisma",
+        "Metabase",
+        "AdminJS"
+      ]
     },
     {
-      "name": "Infrastructure and DevOps",
-      "keywords": ["Docker", "Kubernetes", "Terraform", "GCP", "AWS", "SigNoz", "PagerDuty"]
+      "name": "Infrastructure & DevOps",
+      "keywords": [
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "GCP",
+        "AWS",
+        "SigNoz",
+        "PagerDuty"
+      ]
     }
   ],
   "projects": [
     {
       "name": "SplitWatt - Electricity Bill Splitter",
       "url": "https://splitwatt.vercel.app/",
-      "roles": ["Creator"],
-      "keywords": ["Next.js", "Better Auth", "Umami"]
+      "roles": [
+        "Creator"
+      ],
+      "keywords": [
+        "Next.js",
+        "Better Auth",
+        "Umami"
+      ]
     },
     {
       "name": "Soteira - Real Time Video Inference",
       "url": "https://github.com/adityaongit/soteira",
-      "roles": ["Creator"],
-      "keywords": ["LLMs", "OpenCV", "YOLO", "Python", "ML"]
+      "roles": [
+        "Creator"
+      ],
+      "keywords": [
+        "LLMs",
+        "OpenCV",
+        "YOLO",
+        "Python",
+        "ML"
+      ]
     },
     {
       "name": "Pair Code - Developer Platform",
       "url": "https://paircode-dev.vercel.app/",
-      "roles": ["Creator"],
-      "keywords": ["Node.js", "WebSockets", "React.js"]
+      "roles": [
+        "Creator"
+      ],
+      "keywords": [
+        "Node.js",
+        "WebSockets",
+        "React.js"
+      ]
     }
   ],
   "meta": {
