@@ -8,6 +8,8 @@ This repo is the source of truth for `Aditya_SWE_Resume_2YOE.pdf`. The PDF lives
 - **`formatting.sty`** — typography, spacing, and layout primitives.
 - **`.claude/skills/resume-bullets/SKILL.md`** — the house style for bullets. Read it before adding or rewriting any bullet.
 
+For the full pipeline reference, including verification curls and a troubleshooting cheat sheet, see [`docs/RESUME_PIPELINE.md`](docs/RESUME_PIPELINE.md).
+
 ## How a change reaches the website
 
 ```
