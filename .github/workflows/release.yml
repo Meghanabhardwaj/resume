@@ -104,3 +104,15 @@ jobs:
           generate_release_notes: true
           make_latest: true
           fail_on_unmatched_files: true
+
+      - name: Revalidate portfolio resume cache
+        if: github.ref == 'refs/heads/main' && env.PORTFOLIO_REVALIDATE_URL != ''
+        env:
+          PORTFOLIO_REVALIDATE_URL: ${{ vars.PORTFOLIO_REVALIDATE_URL }}
+          PORTFOLIO_REVALIDATE_SECRET: ${{ secrets.PORTFOLIO_REVALIDATE_SECRET }}
+        run: |
+          curl -fsS -X POST "$PORTFOLIO_REVALIDATE_URL" \
+            -H "Authorization: Bearer $PORTFOLIO_REVALIDATE_SECRET" \
+            -H "Content-Type: application/json" \
+            -d '{"source":"resume-release","tag":"v${{ github.run_number }}"}' \
+            && echo "Portfolio cache revalidated."
