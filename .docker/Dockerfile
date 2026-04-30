@@ -1,6 +1,6 @@
 FROM texlive/texlive:latest
 
-RUN tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2025/tlnet-final && \
+RUN tlmgr option repository ctan && \
     tlmgr update --self && \
     tlmgr install \
     enumitem \
