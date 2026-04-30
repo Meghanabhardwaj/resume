@@ -61,15 +61,15 @@
 }
 
 \newcommand{\educationentry}[3]{%
-  \textbf{#1} -- #2 \hfill #3
+  \noindent\makebox[\linewidth][l]{\textbf{#1} -- #2\hfill #3}%
 }
 
 \newcommand{\experiencecompany}[2]{%
-  \textbf{#1} \hfill #2 \\
+  \noindent\makebox[\linewidth][l]{\textbf{#1}\hfill #2}\par
 }
 
 \newcommand{\experiencerole}[2]{%
-  \textit{#1} \hfill #2
+  \noindent\makebox[\linewidth][l]{\textit{#1}\hfill #2}%
 }
 
 \newcommand{\experienceentry}[4]{%
@@ -84,7 +84,7 @@
 }
 
 \newcommand{\projectheading}[4]{%
-  {\textbf{#1}, #2} \hfill \href{#3}{\color{RoyalBlue}{#4}} \\
+  \noindent\makebox[\linewidth][l]{{\textbf{#1}, #2}\hfill \href{#3}{\color{RoyalBlue}{#4}}}\par
 }
 
 \newcommand{\projectentry}[4]{%
