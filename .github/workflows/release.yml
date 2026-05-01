@@ -33,6 +33,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Lowercase repository owner
+        id: owner
+        run: echo "lc=${GITHUB_REPOSITORY_OWNER,,}" >> $GITHUB_OUTPUT
+
       - name: Install yq
         run: |
           sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.45.1/yq_linux_amd64
@@ -43,7 +47,7 @@ jobs:
         with:
           context: .docker
           push: ${{ github.ref == 'refs/heads/main' }}
-          tags: ghcr.io/${{ github.repository_owner }}/latex-builder:latest
+          tags: ghcr.io/${{ steps.owner.outputs.lc }}/latex-builder:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -57,7 +61,7 @@ jobs:
       - name: Build Resume
         run: |
           docker run --rm -v "${{ github.workspace }}:/data" \
-            ghcr.io/${{ github.repository_owner }}/latex-builder \
+            ghcr.io/${{ steps.owner.outputs.lc }}/latex-builder \
             -jobname="Meghana_SWE_Resume_2YOE" main.tex
 
       - name: Generate changelog
