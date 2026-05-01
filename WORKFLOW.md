@@ -28,7 +28,7 @@ A plain-English reminder of how this repo turns a YAML file into a PDF resume.
 |---|---|
 | `make generate` | YAML → tex partials + resume.json. No PDF yet. |
 | `make docker` | Builds the LaTeX-builder Docker image (one-time, or after Dockerfile changes). |
-| `make compile` | Runs `generate`, then runs the Docker image to compile `main.tex` → `Aditya_SWE_Resume_2YOE.pdf`. |
+| `make compile` | Runs `generate`, then runs the Docker image to compile `main.tex` → `Meghana_SWE_Resume_2YOE.pdf`. |
 | `make build` | `docker` + `compile` — full first-time setup. |
 | `make dev` | `clean` + `compile` — your normal "I edited the YAML, give me a fresh PDF" command. |
 | `make clean` | Deletes the PDF and LaTeX aux files. |
@@ -38,6 +38,6 @@ A plain-English reminder of how this repo turns a YAML file into a PDF resume.
 
 1. Edit `resume.yaml` (or use the web editor, which writes the YAML for you).
 2. Run `make dev`.
-3. Open `Aditya_SWE_Resume_2YOE.pdf`.
+3. Open `Meghana_SWE_Resume_2YOE.pdf`.
 
 The reason there are "so many" commands is just decomposition: `build` = first time, `dev` = day-to-day, and the others (`generate`, `compile`, `docker`, `clean`) are the individual steps exposed so you can run them in isolation when debugging.

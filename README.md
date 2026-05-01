@@ -1,4 +1,4 @@
-# Aditya Jindal Resume
+# Meghana Bhardwaj Resume
 
 This repository contains my resume in TeX, with a YAML source-of-truth layer that generates both the visible resume sections and the embedded metadata files.
 
@@ -39,13 +39,13 @@ For running the editor without Docker Compose:
 <p>1. <strong>Clone the repository</strong>:</p>
 
 ```sh
-git clone git@github.com:adityaongit/resume.git
+git clone git@github.com:Meghanabhardwaj/resume.git
 ```
 
 Or via HTTPS:
 
 ```sh
-git clone https://github.com/adityaongit/resume.git
+git clone https://github.com/Meghanabhardwaj/resume.git
 ```
 
 <p>2. <strong>Build the Docker image</strong>:</p>
@@ -63,7 +63,7 @@ make generate
 <p>4. <strong>Compile the resume</strong>:</p>
 
 ```sh
-docker run --rm -v "$(pwd):/data" latex-builder -jobname="Aditya_SWE_Resume_2YOE" main.tex
+docker run --rm -v "$(pwd):/data" latex-builder -jobname="Meghana_SWE_Resume_2YOE" main.tex
 ```
 
 You can also use:
@@ -141,7 +141,7 @@ If you want the app to push from a container or from an environment without loca
 
 ```sh
 export GITHUB_TOKEN=...
-export GITHUB_OWNER=adityaongit
+export GITHUB_OWNER=Meghanabhardwaj
 export GITHUB_REPO=resume
 export GITHUB_BRANCH=main
 ```
@@ -212,13 +212,13 @@ The compiled PDF contains embedded metadata across multiple standards, making it
 Verify the PDF metadata after compiling:
 
 ```sh
-exiftool -xmp:all Aditya_SWE_Resume_2YOE.pdf
+exiftool -xmp:all Meghana_SWE_Resume_2YOE.pdf
 ```
 
 List embedded attachments:
 
 ```sh
-pdfdetach -list Aditya_SWE_Resume_2YOE.pdf
+pdfdetach -list Meghana_SWE_Resume_2YOE.pdf
 ```
 
 ## Customization
@@ -235,7 +235,7 @@ For step-by-step editing and verification instructions, see [`USER_GUIDE.md`](./
 > [!IMPORTANT]
 > GitHub Actions automatically builds and releases the resume on every push to `main`.
 
-Download the latest compiled PDF from the [Releases](https://github.com/adityaongit/resume/releases/latest) page.
+Download the latest compiled PDF from the [Releases](https://github.com/Meghanabhardwaj/resume/releases/latest) page.
 
 ## License
 

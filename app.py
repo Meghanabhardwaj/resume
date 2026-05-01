@@ -23,7 +23,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent
 RESUME_YAML = ROOT / "resume.yaml"
 EDITOR_SCHEMA = ROOT / "editor_schema.json"
-PDF_PATH = ROOT / "Aditya_SWE_Resume_2YOE.pdf"
+PDF_PATH = ROOT / "Meghana_SWE_Resume_2YOE.pdf"
 GENERATED_FILES = [
     RESUME_YAML.relative_to(ROOT).as_posix(),
     "resume.json",
