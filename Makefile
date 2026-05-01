@@ -1,6 +1,6 @@
 .PHONY: build clean compile dev docker generate help
 
-RESUME_JOBNAME ?= Megahana_SWE_Resume_2YOE
+RESUME_JOBNAME ?= Meghana_SWE_Resume_2YOE
 
 help:
 	@echo "Available targets:"
