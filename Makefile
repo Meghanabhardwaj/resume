@@ -1,5 +1,7 @@
 .PHONY: build clean compile dev docker generate help
 
+RESUME_JOBNAME ?= Megahana_SWE_Resume_2YOE
+
 help:
 	@echo "Available targets:"
 	@echo "  generate   - Generate TeX partials and JSON metadata from resume.yaml"
@@ -18,7 +20,7 @@ generate:
 	python3 scripts/generate_resume.py
 
 compile: generate
-	docker run --rm -v "$(PWD):/data" latex-builder -jobname="Aditya_SWE_Resume_2YOE" main.tex
+	docker run --rm -v "$(PWD):/data" latex-builder -jobname="$(RESUME_JOBNAME)" main.tex
 
 clean:
 	rm -f *.pdf *.aux *.log *.out

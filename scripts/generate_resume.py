@@ -122,22 +122,53 @@ def render_header(data: dict) -> str:
     location = tex_escape(basics["location"]["display"])
     email = basics["email"]
     phone = basics["phone"]
+
+    # Current header layout keeps profile links on the same centered line as the
+    # primary contact info. This works better for resumes with only one or two links.
+    parts = [
+        location,
+        rf"\href{{mailto:{email}}}{{{tex_escape(email)}}}",
+        rf"\href{{{phone['url']}}}{{{tex_escape(phone['display'])}}}",
+    ]
+    profiles = [
+        rf"\href{{{profile['url']}}}{{\color{{RoyalBlue}}{tex_escape(profile['label'])}}}"
+        for profile in basics["profiles"]
+    ]
+    parts.extend(profiles)
     contact = " | ".join(
         [
-            location,
-            rf"\href{{mailto:{email}}}{{{tex_escape(email)}}}",
-            rf"\href{{{phone['url']}}}{{{tex_escape(phone['display'])}}}",
+            part for part in parts if part
         ]
     )
-    profiles = " | ".join(
-        rf"\href{{{profile['url']}}}{{{tex_escape(profile['label'])}}}" for profile in basics["profiles"]
-    )
+
+    # Previous split-line behavior kept profile links on a separate centered line.
+    # Keep this reference here so switching back is a small edit:
+    #
+    # contact = " | ".join(
+    #     [
+    #         location,
+    #         rf"\href{{mailto:{email}}}{{{tex_escape(email)}}}",
+    #         rf"\href{{{phone['url']}}}{{{tex_escape(phone['display'])}}}",
+    #     ]
+    # )
+    # profiles = " | ".join(
+    #     rf"\href{{{profile['url']}}}{{{tex_escape(profile['label'])}}}"
+    #     for profile in basics["profiles"]
+    # )
+    # return "\n".join(
+    #     [
+    #         "% Generated from resume.yaml. Do not edit directly.",
+    #         rf"\resumeName{{{tex_escape(basics['name'])}}}",
+    #         rf"\resumeContactLine{{{contact}}}",
+    #         rf"\resumeProfileLinks{{{profiles}}}",
+    #     ]
+    # )
+
     return "\n".join(
         [
             "% Generated from resume.yaml. Do not edit directly.",
             rf"\resumeName{{{tex_escape(basics['name'])}}}",
             rf"\resumeContactLine{{{contact}}}",
-            rf"\resumeProfileLinks{{{profiles}}}",
         ]
     )
 

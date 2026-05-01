@@ -3,21 +3,18 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://github.com/adityaongit",
-      "name": "Aditya Jindal",
+      "@id": "mailto:megbhardwaj99@gmail.com",
+      "name": "Meghana Bhardwaj",
       "jobTitle": "Software Engineer",
-      "email": "work.adityajindal@gmail.com",
-      "url": "https://adysfolio.vercel.app/",
+      "email": "megbhardwaj99@gmail.com",
+      "url": "https://www.linkedin.com/",
       "sameAs": [
-        "https://adysfolio.vercel.app/",
-        "https://www.linkedin.com/in/adityaonin",
-        "https://github.com/adityaongit",
-        "https://leetcode.com/adysleetcode"
+        "https://www.linkedin.com/"
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
+        "addressLocality": null,
+        "addressRegion": "Karnataka",
         "addressCountry": "IN"
       },
       "alumniOf": {
@@ -25,49 +22,46 @@
         "name": "Chandigarh University"
       },
       "knowsAbout": [
-        "TypeScript",
-        "Go",
-        "JavaScript",
-        "Python",
         "Java",
-        "Next.js",
-        "Node.js",
+        "Python",
+        "JavaScript",
         "React.js",
-        "Express.js",
-        "Flask",
-        "Celery",
-        "Typesense",
-        "MySQL",
-        "PostgreSQL",
-        "Prisma",
-        "Metabase",
-        "AdminJS",
-        "Docker",
-        "Kubernetes",
-        "Terraform",
-        "GCP",
+        "Node.js",
+        "Spring Boot",
         "AWS",
-        "SigNoz",
-        "PagerDuty",
+        "GCP",
+        "Jenkins",
+        "Docker",
+        "GitHub Actions",
+        "Argo CD",
+        "SQL",
+        "PostgreSQL",
+        "Metabase",
+        "Amazon QuickSight",
+        "n8n",
+        "CI/CD",
+        "REST APIs",
+        "Object-Oriented Design",
+        "System Design",
         "LLMs",
-        "RAG"
+        "Prompt Engineering",
+        "Cloud Infrastructure"
       ],
       "hasOccupation": [
         {
           "@type": "Occupation",
-          "name": "Software Engineer",
+          "name": "Platform Engineer",
           "alternateName": [
-            "SWE",
-            "Backend Engineer",
-            "Full Stack Engineer"
+            "Platform Engineer",
+            "Cloud Engineer"
           ],
           "occupationLocation": {
             "@type": "City",
-            "name": "Mumbai"
+            "name": "Bengaluru"
           },
           "hiringOrganization": {
             "@type": "Organization",
-            "name": "Edra Labs -- BrowserStack"
+            "name": "Eagle View"
           },
           "startDate": "2024-08"
         },
@@ -76,8 +70,7 @@
           "name": "Software Engineering Intern",
           "alternateName": [
             "SWE Intern",
-            "Engineering Intern",
-            "Developer Intern"
+            "Engineering Intern"
           ],
           "occupationLocation": {
             "@type": "City",
@@ -95,44 +88,27 @@
       "workExample": [
         {
           "@type": "SoftwareSourceCode",
-          "name": "IdxBeaver - IndexedDB Client",
-          "url": "https://indexbeaver.vercel.app",
+          "name": "TS-ToolKit",
+          "url": "https://about.google/",
           "programmingLanguage": [
-            "Chrome Extension",
-            "IndexedDB",
-            "DevTools"
+            "JavaScript",
+            "Spring Boot",
+            "Google App Engine",
+            "Cloud Functions"
           ]
         },
         {
           "@type": "SoftwareSourceCode",
-          "name": "Soteira - Real Time Video Inference",
-          "url": "https://github.com/adityaongit/soteira",
+          "name": "HealthMitra",
+          "url": "https://about.google/",
           "programmingLanguage": [
-            "LLMs",
-            "OpenCV",
-            "YOLO",
-            "Python",
-            "ML"
-          ]
-        },
-        {
-          "@type": "SoftwareSourceCode",
-          "name": "Pair Code - Developer Platform",
-          "url": "https://paircode-dev.vercel.app/",
-          "programmingLanguage": [
-            "Node.js",
-            "WebSockets",
-            "React.js"
-          ]
-        },
-        {
-          "@type": "SoftwareSourceCode",
-          "name": "SplitWatt - Electricity Bill Splitter",
-          "url": "https://splitwatt.vercel.app/",
-          "programmingLanguage": [
-            "Next.js",
-            "Better Auth",
-            "Umami"
+            "JavaScript",
+            "SQL",
+            "Machine Learning",
+            "API",
+            "XML",
+            "HTML5",
+            "CSS3"
           ]
         }
       ],
@@ -141,20 +117,20 @@
       "dateModified": "2026",
       "copyrightHolder": {
         "@type": "Person",
-        "name": "Aditya Jindal"
+        "name": "Meghana Bhardwaj"
       },
       "license": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://github.com/adityaongit/resume",
-      "name": "Aditya Jindal - Resume",
+      "@id": "urn:resume:meghana-bhardwaj",
+      "name": "Meghana Bhardwaj - Resume",
       "alternateName": [
-        "Aditya Jindal - CV",
-        "Aditya Jindal - Curriculum Vitae"
+        "Meghana Bhardwaj - CV",
+        "Meghana Bhardwaj - Curriculum Vitae"
       ],
       "about": {
-        "@id": "https://github.com/adityaongit"
+        "@id": "mailto:megbhardwaj99@gmail.com"
       },
       "hasPart": [
         {
@@ -170,7 +146,7 @@
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "Software Engineer at Edra Labs -- BrowserStack"
+              "name": "Platform Engineer at Eagle View"
             },
             {
               "@type": "ListItem",
@@ -191,7 +167,7 @@
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "BE Computer Science and Engineering - Chandigarh University"
+              "name": "BE Computer Science - Chandigarh University"
             }
           ]
         },
@@ -209,22 +185,27 @@
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "Languages: TypeScript, Go, JavaScript, Python, Java"
+              "name": "Languages: Java, Python, JavaScript"
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Technologies: Next.js, Node.js, React.js, Express.js, Flask, Celery, Typesense"
+              "name": "Frameworks: React.js, Node.js, Spring Boot"
             },
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Databases: MySQL, PostgreSQL, Prisma, Metabase, AdminJS"
+              "name": "Cloud & DevOps: AWS, GCP, Jenkins, Docker, GitHub Actions, Argo CD"
             },
             {
               "@type": "ListItem",
               "position": 4,
-              "name": "Infrastructure & DevOps: Docker, Kubernetes, Terraform, GCP, AWS, SigNoz, PagerDuty"
+              "name": "Data, Analytics & Tools: SQL, PostgreSQL, Metabase, Amazon QuickSight, n8n"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Concepts: CI/CD, REST APIs, Object-Oriented Design, System Design, LLMs, Prompt Engineering"
             }
           ]
         },
@@ -241,22 +222,12 @@
             {
               "@type": "ListItem",
               "position": 1,
-              "name": "IdxBeaver - IndexedDB Client"
+              "name": "TS-ToolKit"
             },
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Soteira - Real Time Video Inference"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Pair Code - Developer Platform"
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "name": "SplitWatt - Electricity Bill Splitter"
+              "name": "HealthMitra"
             }
           ]
         }
