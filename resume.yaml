@@ -1,102 +1,86 @@
 achievements:
-  - Solved over **600 coding questions** on platforms like [LeetCode](https://leetcode.com/u/adysleetcode/)
-    and [GeeksforGeeks](https://www.geeksforgeeks.org/user/adysgfg/).
-  - "[AWS Certified Solutions Architect](https://www.coursera.org/account/accomplishments/professional-cert/3V2Q2RD4X7NG)
-    - Amazon Web Services, 2024"
-  - "[Google Associate Cloud Engineer Certification](https://drive.google.com/file/d/1AAtIxFsjt6rqrTe52p9mTzh7wxzh2sQR/view)
-    - Google Cloud, 2023"
+  - Mentored **1000+ students** on system design and resume building through
+    Google Developer Student Clubs and the Alexa Community.
+  - AWS Certified Solutions Architect - Amazon Web Services, 2024
+  - Google Associate Cloud Engineer - Google Cloud, 2023
 basics:
-  email: work.adityajindal@gmail.com
+  email: megbhardwaj99@gmail.com
   label: Software Engineer
   location:
-    city: Mumbai
+    city: null
     country_code: IN
     country_name: India
-    display: Mumbai, India
-    pdf_display: Mumbai - Maharashtra - India
-    region: Maharashtra
-  name: Aditya Jindal
+    display: Bengaluru, India
+    pdf_display: Bengaluru - Karnataka - India
+    region: Karnataka
+  name: Meghana Bhardwaj
   phone:
-    display: "+917082347965"
-    url: tel://(+917082347965)
+    display: "+91 7876783875"
+    url: tel://(+917876783875)
   profiles:
-    - label: Portfolio
-      network: Portfolio
-      url: https://adysfolio.vercel.app/
-      username: adysfolio
     - label: LinkedIn
       network: LinkedIn
-      url: https://www.linkedin.com/in/adityaonin
-      username: adityaonin
-    - label: GitHub
-      network: GitHub
-      url: https://github.com/adityaongit
-      username: adityaongit
-    - label: LeetCode
-      network: LeetCode
-      url: https://leetcode.com/adysleetcode
-      username: adysleetcode
-  summary:
-    Software Engineer with experience across AI products, backend systems,
-    developer tooling, and full-stack web applications.
-  website: https://adysfolio.vercel.app/
+      url: https://www.linkedin.com/
+      username: null
+  summary: Software Engineer with experience in platform engineering, cloud infrastructure,
+    CI/CD automation, analytics platforms, and full-stack application development.
+  website: https://www.linkedin.com/
 education:
-  - area: Computer Science and Engineering
-    display: "CGPA: 8.52 | 2020 - 2024"
+  - area: Computer Science
+    display: "CGPA: 8.22 | 2020 - 2024"
     end_date: "2024"
     institution: Chandigarh University
-    score: 8.52 CGPA
+    score: 8.22 CGPA
     short_study_type: BE
     start_date: "2020"
     study_type: Bachelor of Engineering
     url: null
 experience:
   - alternate_names:
-      - SWE
-      - Backend Engineer
-      - Full Stack Engineer
+      - Platform Engineer
+      - Cloud Engineer
     bullets:
-      - Shipped an **AI copilot Chrome extension** for Salesforce that reduces manual
-        CRM data entry by auto-linking activities to deals, extracting field values from
-        transcripts, and suggesting pipeline stage transitions.
-      - Integrated **4 external platforms** (Gmail, Zoom, Fireflies.ai, Google Calendar)
-        into a unified context layer, routing data across **multiple LLM providers** for
-        structured field extraction and conversational deal analysis.
-      - Built backend for **AI-driven CX system** with multiple LLM agents (RAG, diagnosis,
-        evaluation, query handling), now resolving 60% of L2 tickets automatically.
-      - Implemented an LLM-as-a-judge evaluation layer using **DeepEval's G-Eval** framework
-        to measure and improve AI response quality and confidence calibration.
-      - Optimized prompt-response cycles using a **LangChain-based caching system**, cutting
-        redundant API calls and improving system efficiency for frequently updated pages.
-      - Contributed to an **AI-powered web crawler**, integrating GPT, Gemini, Claude,
-        and **Qdrant for RAG + Vector search**, improving structured data extraction from
-        complex websites.
-    company: Edra Labs -- BrowserStack
+      - Accelerated software delivery by **40%** by designing near-touchless
+        CI/CD pipelines using **Jenkins** and **GitHub Actions** with integrated
+        approval gates and automated validation.
+      - Owned and managed **AWS** cloud infrastructure, including provisioning,
+        monitoring, cost optimization, and auto-scaling across production environments.
+      - Developed internal analytics platforms using **Metabase** and **Amazon QuickSight**,
+        providing real-time insights into cost, performance, and system utilization.
+      - Reduced MTTR by **35%** through proactive monitoring, alerting, and automated
+        remediation strategies.
+      - Built AI-assisted automation workflows using **LLM** concepts and prompt
+        engineering to enable intelligent decision-making in operational pipelines.
+      - Applied object-oriented design and modular architecture to develop scalable
+        automation systems using **Python** and **Boto3**.
+      - Collaborated in agile environments, working cross-functionally with stakeholders
+        to translate business requirements into scalable technical solutions.
+    company: Eagle View
     end_date: null
     end_display: Present
     location:
-      city: Mumbai
+      city: Bengaluru
       country: India
-      display: Mumbai, India
-      region: Maharashtra
-    position: Software Engineer
+      display: Bengaluru, India
+      region: Karnataka
+    position: Platform Engineer
     start_date: 2024-08
     start_display: Aug 2024
     url: null
   - alternate_names:
       - SWE Intern
       - Engineering Intern
-      - Developer Intern
     bullets:
-      - Developed **Terraformarium**, an internal **Go** tool that automated **infrastructure**
-        setup for **Anthos** and **Composer**.
-      - Delivered up to **$600** savings for every 100 Cases around **Anthos Service Mesh**.
-      - Reduced provisioning time & costs by **37%** with **Terraform** for better recreation
-        of client environments.
-      - Contributed to **TS Toolkit**, enhancing **IAM Role Comparison** and **Foreign
-        Logs Translation** capabilities.
-      - Implemented **serverless** backend with **Cloud Functions**; deployed on **App
-        Engine** with **auto-scaling** and **load balancing**.
+      - Developed end-to-end full-stack features, integrating frontend interfaces
+        (**JavaScript**, **jQuery**) with backend services (**Spring Boot**, **GCP**).
+      - Built **TextMySnap**, enabling automatic capture and translation of error
+        messages, including screenshots, to improve multilingual debugging.
+      - Designed an **IAM permissions mapper**, improving transparency and security
+        by mapping roles to granular permissions.
+      - Designed and implemented **RESTful APIs** for seamless communication between
+        frontend and backend systems.
+      - Deployed scalable applications on **Google App Engine** and leveraged
+        **Cloud Functions** for event-driven backend processing.
     company: Google
     end_date: 2023-08
     end_display: Aug 2023
@@ -110,149 +94,129 @@ experience:
     start_display: Jun 2023
     url: https://about.google/
 meta:
-  canonical: https://github.com/adityaongit/resume
+  canonical: urn:resume:meghana-bhardwaj
   created_year: 2026
   license_url: https://www.apache.org/licenses/LICENSE-2.0
   version: v1.0.0
 pdf:
   creator: pdflatex + XCharter
   keywords:
-    - Aditya Jindal
+    - Meghana Bhardwaj
     - Software Engineer
-    - SWE
-    - Full Stack Engineer
-    - Backend Engineer
-    - Go
-    - TypeScript
-    - JavaScript
-    - Python
+    - Software Engineering Intern
+    - Platform Engineer
+    - Cloud Engineer
     - Java
-    - Next.js
-    - Node.js
+    - Python
+    - JavaScript
     - React.js
-    - Express.js
-    - Flask
-    - Celery
-    - Typesense
-    - PostgreSQL
-    - MySQL
-    - Prisma
-    - Docker
-    - Kubernetes
-    - Terraform
-    - GCP
+    - Node.js
+    - Spring Boot
     - AWS
-    - SigNoz
-    - PagerDuty
+    - GCP
+    - Jenkins
+    - Docker
+    - GitHub Actions
+    - Argo CD
+    - SQL
+    - PostgreSQL
+    - Metabase
+    - Amazon QuickSight
+    - n8n
+    - CI/CD
+    - REST APIs
+    - System Design
     - LLMs
-    - RAG
-    - Mumbai
-    - India
+    - Prompt Engineering
     - Google
-    - BrowserStack
-    - Edra Labs
-    - adityaongit
-    - adityaonin
-    - adysleetcode
+    - Eagle View
+    - Chandigarh University
   lang: en-US
-  producer: Aditya Jindal
+  producer: Meghana Bhardwaj
   pubtype: other
-  subject: Software Engineer Resume - Go, TypeScript, AI Products, Backend, Full Stack
+  subject: Software Engineer Resume - Platform Engineering, Cloud, Full Stack
 projects:
   - bullets:
-      - Shipped a **Chrome DevTools extension** that turns Chrome's read-only IndexedDB
-        inspector into a full **database client**.
-      - Lets developers **query, edit, and export** browser-stored data with **MongoDB-style
-        filters** -- live on the **Chrome Web Store**.
+      - Developed **TextMySnap** to capture and translate error messages, including
+        screenshots, improving accessibility for global users.
+      - Implemented an **IAM analysis** module to map roles to permissions, enabling
+        better access control and security compliance.
+      - Built responsive frontend interfaces with a focus on usability and cross-platform
+        compatibility.
+      - Deployed on **Google App Engine** with a serverless backend powered by
+        **Cloud Functions**.
+      - Followed object-oriented design principles and reusable component architecture
+        for maintainability and scalability.
     keywords:
-      - Chrome Extension
-      - IndexedDB
-      - DevTools
-    link_label: Live Link
-    name: IdxBeaver - IndexedDB Client
+      - JavaScript
+      - Spring Boot
+      - Google App Engine
+      - Cloud Functions
+    link_label: Project
+    name: TS-ToolKit
     roles:
-      - Creator
-    url: https://indexbeaver.vercel.app
+      - Developer
+    url: https://about.google/
   - bullets:
-      - Built a real-time video inference engine for live natural-language prompts, achieving
-        **~150 ms CPU inference**.
-      - Implemented a **4-gate pipeline** (motion, scene change, object entry, NLP) using
-        OpenCV, YOLO-nano/YOLOv8n, and ML.
+      - Designed and built **HealthMitra**, a scalable web application using
+        **JavaScript**, **HTML5**, **CSS3**, and **SQL**, with a modular architecture
+        that supports future feature expansion.
+      - Integrated external **APIs** to collect patient symptom data and process
+        structured inputs for downstream analysis.
+      - Applied **machine learning** models to analyze symptom data and predict
+        likely health conditions, improving the application's decision-support capability.
     keywords:
-      - LLMs
-      - OpenCV
-      - YOLO
-      - Python
-      - ML
-    link_label: GitHub Link
-    name: Soteira - Real Time Video Inference
+      - JavaScript
+      - SQL
+      - Machine Learning
+      - API
+      - XML
+      - HTML5
+      - CSS3
+    link_label: Project
+    name: HealthMitra
     roles:
-      - Creator
-    url: https://github.com/adityaongit/soteira
-  - bullets:
-      - Facilitates **real-time** code synchronization across diverse **programming languages**,
-        enabling seamless team collaboration.
-      - Features an in-built compiler, allowing users to **Compile and Run** code directly
-        within the platform.
-    keywords:
-      - Node.js
-      - WebSockets
-      - React.js
-    link_label: Live Link
-    name: Pair Code - Developer Platform
-    roles:
-      - Creator
-    url: https://paircode-dev.vercel.app/
-  - bullets:
-      - Built an open-source **electricity bill splitting** app with submeter-based cost
-        distribution and UPI payment integration.
-      - Reached **129 countries** with **9K+ impressions** at **5.5% CTR** -- ~3x industry
-        average -- with zero paid acquisition.
-    keywords:
-      - Next.js
-      - Better Auth
-      - Umami
-    link_label: Live Link
-    name: SplitWatt - Electricity Bill Splitter
-    roles:
-      - Creator
-    url: https://splitwatt.vercel.app/
+      - Developer
+    url: https://about.google/
 schema:
   additional_knows_about:
     - LLMs
-    - RAG
-  person_id: https://github.com/adityaongit
-  resume_id: https://github.com/adityaongit/resume
+    - Prompt Engineering
+    - CI/CD
+    - Cloud Infrastructure
+  person_id: mailto:megbhardwaj99@gmail.com
+  resume_id: urn:resume:meghana-bhardwaj
 skills:
   - keywords:
-      - TypeScript
-      - Go
-      - JavaScript
-      - Python
       - Java
+      - Python
+      - JavaScript
     name: Languages
   - keywords:
-      - Next.js
-      - Node.js
       - React.js
-      - Express.js
-      - Flask
-      - Celery
-      - Typesense
-    name: Technologies
+      - Node.js
+      - Spring Boot
+    name: Frameworks
   - keywords:
-      - MySQL
-      - PostgreSQL
-      - Prisma
-      - Metabase
-      - AdminJS
-    name: Databases
-  - keywords:
-      - Docker
-      - Kubernetes
-      - Terraform
-      - GCP
       - AWS
-      - SigNoz
-      - PagerDuty
-    name: Infrastructure & DevOps
+      - GCP
+      - Jenkins
+      - Docker
+      - GitHub Actions
+      - Argo CD
+    name: Cloud & DevOps
+  - keywords:
+      - SQL
+      - PostgreSQL
+      - Metabase
+      - Amazon QuickSight
+      - n8n
+    name: Data, Analytics & Tools
+  - keywords:
+      - CI/CD
+      - REST APIs
+      - Object-Oriented Design
+      - System Design
+      - LLMs
+      - Prompt Engineering
+    name: Concepts

@@ -1,40 +1,30 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Aditya Jindal",
+    "name": "Meghana Bhardwaj",
     "label": "Software Engineer",
-    "email": "work.adityajindal@gmail.com",
-    "url": "https://adysfolio.vercel.app/",
-    "summary": "Software Engineer with experience across AI products, backend systems, developer tooling, and full-stack web applications.",
+    "email": "megbhardwaj99@gmail.com",
+    "url": "https://www.linkedin.com/",
+    "summary": "Software Engineer with experience in platform engineering, cloud infrastructure, CI/CD automation, analytics platforms, and full-stack application development.",
     "location": {
-      "city": "Mumbai",
-      "region": "Maharashtra",
+      "city": null,
+      "region": "Karnataka",
       "countryCode": "IN"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "adityaonin",
-        "url": "https://www.linkedin.com/in/adityaonin"
-      },
-      {
-        "network": "GitHub",
-        "username": "adityaongit",
-        "url": "https://github.com/adityaongit"
-      },
-      {
-        "network": "LeetCode",
-        "username": "adysleetcode",
-        "url": "https://leetcode.com/adysleetcode"
+        "username": null,
+        "url": "https://www.linkedin.com/"
       }
     ]
   },
   "work": [
     {
-      "name": "Edra Labs -- BrowserStack",
-      "position": "Software Engineer",
+      "name": "Eagle View",
+      "position": "Platform Engineer",
       "startDate": "2024-08",
-      "location": "Mumbai, Maharashtra, India"
+      "location": "Bengaluru, Karnataka, India"
     },
     {
       "name": "Google",
@@ -48,9 +38,9 @@
   "education": [
     {
       "institution": "Chandigarh University",
-      "area": "Computer Science and Engineering",
+      "area": "Computer Science",
       "studyType": "Bachelor of Engineering",
-      "score": "8.52 CGPA",
+      "score": "8.22 CGPA",
       "startDate": "2020",
       "endDate": "2024"
     }
@@ -59,102 +49,85 @@
     {
       "name": "Languages",
       "keywords": [
-        "TypeScript",
-        "Go",
-        "JavaScript",
+        "Java",
         "Python",
-        "Java"
+        "JavaScript"
       ]
     },
     {
-      "name": "Technologies",
+      "name": "Frameworks",
       "keywords": [
-        "Next.js",
-        "Node.js",
         "React.js",
-        "Express.js",
-        "Flask",
-        "Celery",
-        "Typesense"
+        "Node.js",
+        "Spring Boot"
       ]
     },
     {
-      "name": "Databases",
+      "name": "Cloud & DevOps",
       "keywords": [
-        "MySQL",
-        "PostgreSQL",
-        "Prisma",
-        "Metabase",
-        "AdminJS"
-      ]
-    },
-    {
-      "name": "Infrastructure & DevOps",
-      "keywords": [
-        "Docker",
-        "Kubernetes",
-        "Terraform",
-        "GCP",
         "AWS",
-        "SigNoz",
-        "PagerDuty"
+        "GCP",
+        "Jenkins",
+        "Docker",
+        "GitHub Actions",
+        "Argo CD"
+      ]
+    },
+    {
+      "name": "Data, Analytics & Tools",
+      "keywords": [
+        "SQL",
+        "PostgreSQL",
+        "Metabase",
+        "Amazon QuickSight",
+        "n8n"
+      ]
+    },
+    {
+      "name": "Concepts",
+      "keywords": [
+        "CI/CD",
+        "REST APIs",
+        "Object-Oriented Design",
+        "System Design",
+        "LLMs",
+        "Prompt Engineering"
       ]
     }
   ],
   "projects": [
     {
-      "name": "IdxBeaver - IndexedDB Client",
-      "url": "https://indexbeaver.vercel.app",
+      "name": "TS-ToolKit",
+      "url": "https://about.google/",
       "roles": [
-        "Creator"
+        "Developer"
       ],
       "keywords": [
-        "Chrome Extension",
-        "IndexedDB",
-        "DevTools"
+        "JavaScript",
+        "Spring Boot",
+        "Google App Engine",
+        "Cloud Functions"
       ]
     },
     {
-      "name": "Soteira - Real Time Video Inference",
-      "url": "https://github.com/adityaongit/soteira",
+      "name": "HealthMitra",
+      "url": "https://about.google/",
       "roles": [
-        "Creator"
+        "Developer"
       ],
       "keywords": [
-        "LLMs",
-        "OpenCV",
-        "YOLO",
-        "Python",
-        "ML"
-      ]
-    },
-    {
-      "name": "Pair Code - Developer Platform",
-      "url": "https://paircode-dev.vercel.app/",
-      "roles": [
-        "Creator"
-      ],
-      "keywords": [
-        "Node.js",
-        "WebSockets",
-        "React.js"
-      ]
-    },
-    {
-      "name": "SplitWatt - Electricity Bill Splitter",
-      "url": "https://splitwatt.vercel.app/",
-      "roles": [
-        "Creator"
-      ],
-      "keywords": [
-        "Next.js",
-        "Better Auth",
-        "Umami"
+        "JavaScript",
+        "SQL",
+        "Machine Learning",
+        "API",
+        "XML",
+        "HTML5",
+        "CSS3"
       ]
     }
   ],
   "meta": {
-    "canonical": "https://github.com/adityaongit/resume",
+    "canonical": "urn:resume:meghana-bhardwaj",
     "version": "v1.0.0",
     "lastModified": "2026-05-01"
   }
